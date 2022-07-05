@@ -30,7 +30,9 @@ const CountrySection = ({countryData}) => {
                         <p className="domain">Domain: {countryData.cca2}</p>
                         <p className="currency">Currencies: {currencyName.name}</p>
                         <p className="languages">languages: {languages}</p>
-                        <p className="borders">Borders with: {countryData.borders.join(", ")}<span></span></p>
+                        <p className="borders">Borders with: {countryData.borders&&countryData.borders.join(", ")}<span></span></p> {/*some countries have no borders so I have to check if exsits*/}
+                        
+
                     </div>
                 </section>
             </div>    
