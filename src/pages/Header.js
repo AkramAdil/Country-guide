@@ -2,7 +2,7 @@ import React from 'react';
 import "./HeaderStyle.css"
 const Header = () => {
     return (
-        <div className="header header-dark">
+        <div className="header">
             <div className="header-container">
                 <h3 className="logo">
                     Country Guide
