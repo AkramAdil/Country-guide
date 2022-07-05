@@ -1,0 +1,140 @@
+:root {
+    --LightModeText: hsl(200, 15%, 8%);
+    --LightModeInput: hsl(0, 0%, 52%);
+    --LightModeBackground: hsl(0, 0%, 98%);
+    --LightModeElements: hsl(0, 0%, 100%);
+    --DarkModeBackground: hsl(207, 26%, 17%);
+    --DarkModeElements: hsl(209, 23%, 22%);
+    --DarkModeText: hsl(0, 0%, 100%);
+}
+
+.home {
+    background-color: var(--LightModeBackground);
+}
+.home-dark {
+    background-color: var(--DarkModeBackground);
+}
+
+.container {
+    width: 1440px;
+    margin: auto;
+}
+.search {
+    margin-top: 55px;
+    display: flex;
+    justify-content: space-between;
+}
+.search .search-box {
+    background-color: var(--LightModeElements);
+    box-shadow: 0px 0px 9px 0px rgba(0,0,0,0.3);
+    height: 50px;
+    width: 340px;
+    display: flex;
+    align-items: center;
+    border-radius: 6px;
+}
+.search .search-box-dark {
+    background-color: var(--DarkModeElements);
+}
+.search .search-icon {
+    margin-left: 15px;
+}
+.search .search-icon-dark {
+    margin-left: 15px;
+    color: var(--DarkModeText);
+}
+.search input.search-term {
+    border: none;
+    margin-left: 20px;
+    width: 100%;
+    color: var(--LightModeInput);
+    font-family: 'Nunito Sans', sans-serif;
+}
+.search input.search-term-dark {
+    background-color: var(--DarkModeElements);
+    color: var(--DarkModeText)
+}
+
+.search input.search-term:focus {
+    outline: none;
+}
+  
+.search .regions {
+    width: 190px;
+    padding: 15px;
+    background-color: var(--LightModeElements);
+    font-family: 'Nunito Sans', sans-serif;
+    border-radius: 6px;
+    box-shadow: 0px 0px 9px 0px rgba(0,0,0,0.3);
+
+}
+
+.search .regions-dark {
+    background-color: var(--DarkModeElements);
+    color: var(--DarkModeText)
+}
+.search .regions:focus {
+    outline: none;
+}
+
+.countries-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.contryLink {
+    background-color: var(--LightModeElements);
+    border-radius: 10px;
+    box-shadow: 0px 0px 9px 0px rgba(0,0,0,0.3);
+    cursor: pointer;
+    color: var(--LightModeText);
+    text-decoration: none;    
+    font-family: 'Nunito Sans', sans-serif;
+    margin-top: 30px;
+}
+
+.contryLink-dark {
+    background-color: var(--DarkModeBackground);
+    color: var(--DarkModeText)
+}
+
+.contryLink:hover {
+    transition: all 0.3s;
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.4), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+.flag {
+    height: 190px;
+    width: 310px;
+}
+.flag .card-img {
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    width:100%;
+    height:100%;
+}
+.country .name {
+    margin: 10px 15px;
+    font-size: 17px;
+    font-weight: 700;
+}
+.country .info {
+    margin: 15px;
+}
+
+
+@media screen and (max-width: 768px) {
+    .container {
+        width: 540px;
+        margin: auto;
+    }
+    .search {
+        flex-direction: column;
+        align-items: center;
+    }
+    .search .regions {margin-top: 5px;}
+    .countries-container {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+}

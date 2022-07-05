@@ -1,0 +1,114 @@
+:root {
+    --LightModeText: hsl(200, 15%, 8%);
+    --LightModeInput: hsl(0, 0%, 52%);
+    --LightModeBackground: hsl(0, 0%, 98%);
+    --LightModeElements: hsl(0, 0%, 100%);
+    --DarkModeBackground: hsl(207, 26%, 17%);
+    --DarkModeElements: hsl(209, 23%, 22%);
+    --DarkModeText: hsl(0, 0%, 100%);
+}
+.countryPage {
+    background-color: var(--LightModeBackground);
+}
+.countryPage-dark {
+    background-color: var(--DarkModeBackground);
+} 
+.back {
+    width: 1440px;
+    margin: auto;
+    display: flex;
+}
+.back a {
+    text-decoration: none;
+    background-color: var(--LightModeBackground);
+    height: 40px;
+    width: 105px;
+    text-align: center;
+    line-height: 40px;
+    font-family: 'Nunito Sans', sans-serif;
+    font-size: 20px;
+    color: var(--LightModeText);
+    box-shadow: 0px 0px 9px 0px rgb(0 0 0 / 30%);
+    border-radius: 6px;
+    margin-top: 20px;
+}
+.back-dark a {
+    background-color: var(--DarkModeElements);
+    color: var(--DarkModeText)
+}
+.back a:hover {
+    transition: all 0.3s;
+    box-shadow: 0px 5px 10px 0px rgb(0 0 0 / 45%);
+}
+.country-container {
+    width: 1440px;
+    margin: auto;
+    margin-top: 80px;
+    display: flex;
+}
+.country-container .flag {
+    width: 50%;
+    height: 100%;
+}
+.country-container .flag img {
+    width: 500px;
+    height: 340px;
+    border-radius: 6px;
+}
+.country-container .information {
+    width: 50%;
+    font-family: 'Nunito Sans', sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: var(--LightModeText);
+}
+.country-container .information-dark {
+    color: var(--DarkModeText)
+}
+.country-container .information .name {
+    font-size: 35px;
+}
+.country-container .information .extra {
+    margin-top: 25px;
+}
+.country-container .information .extra p {
+    margin: 8px 0;
+}
+
+@media screen and (max-width: 768px) {
+    .back {
+        width: 540px;
+    }
+    .country-container {
+        width: 540px;
+        flex-direction: column;
+
+    }
+    .country-container .flag {
+        width: 100%;
+        height: 50%;
+    }
+    .country-container .flag img {
+        width: 390px;
+        height: 250px;
+    }
+}
+@media screen and (max-width: 412px) {
+    .back {
+        width: 360px;
+    }
+    .country-container {
+        width: 360px;
+        flex-direction: column;
+
+    }
+    .country-container .flag {
+        width: 100%;
+        height: 50%;
+    }
+    .country-container .flag img {
+        width: 100%;
+        height: 220px;
+    }
+}
